@@ -47,6 +47,7 @@ Feedback welcome:
 
 ---
 
+<a id="leaderskills"></a>
 ### Feb 27, 2026 — v0.5 Career & Leadership Skills Suite
 
 Four new skills covering the full product leadership career arc — from PM to Director to VP/CPO — distilled from two episodes of [The Product Porch](https://the-product-porch-43ca35c0.simplecast.com) podcast.
