@@ -173,6 +173,7 @@ Result:
 - `CLAUDE.md`
 - `docs/Building PM Skills.md`
 - `docs/Add-a-Skill Utility Guide.md`
+- Anthropic's [Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf)
 - `scripts/add-a-skill.sh`
 - `scripts/build-a-skill.sh`
 - `scripts/find-a-skill.sh`

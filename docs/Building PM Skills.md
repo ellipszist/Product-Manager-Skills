@@ -2,6 +2,8 @@
 
 This guide explains how we turn real-world PM frameworks and source materials into agent-ready skills in this repo.
 
+Anthropic's [Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) is a useful companion reference for trigger design, testing, and packaging expectations. Use this repo's standards first, then use Anthropic's guide as an external quality check.
+
 ## Local Clone Quickstart
 
 For contributors working directly from a local clone:

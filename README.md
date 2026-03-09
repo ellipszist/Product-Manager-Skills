@@ -51,6 +51,7 @@ What shipped:
 - Trigger checks wired into `scripts/test-library.sh`
 - New `find-a-skill.sh --mode trigger` for discovering skills by use-case language, `best_for`, and `scenarios`
 - Contributor docs updated so future skills follow the same tighter standard
+- Cross-checked the tighter standard against Anthropic's [Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf)
 
 Why it matters:
 1. You spend less time guessing which skill to use.

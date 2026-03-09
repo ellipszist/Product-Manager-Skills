@@ -14,6 +14,8 @@ The `add-a-skill.sh` utility streamlines skill creation by:
 5. **Updating** project documentation automatically
 6. **Staging** files for git commit
 
+For external guidance on skill triggering, testing, and packaging, see Anthropic's [Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf). Treat this repo's standards and scripts as the operational source of truth, and use Anthropic's guide as a cross-check.
+
 This utility is **adapter-driven**. It works out of the box with Claude Code, supports a manual mode (`--agent manual`) that works with any AI CLI, and can be extended via custom adapters.
 
 ---
