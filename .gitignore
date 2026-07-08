@@ -10,7 +10,15 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+# NOTE: dist/ is an INTENTIONALLY COMMITTED, browsable distribution folder
+# (dist/README.md, dist/CATALOG.md, individual skill .zips, and dist/packages/).
+# See docs/RELEASE-PACKAGING.md. We ignore only the intermediate build scratch
+# that scripts/build-dist.sh regenerates and then curates into the tracked layout:
+dist/release/
+dist/skill-zips/
+dist/claude-desktop/
+dist/codex/
+dist/Product-Manager-Skills-*-release.zip
 downloads/
 eggs/
 .eggs/

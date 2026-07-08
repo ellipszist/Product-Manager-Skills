@@ -8,6 +8,42 @@ The release experience should feel simple:
 Download one pack. Unzip it. Upload the skill ZIPs inside. Start asking better product questions.
 ```
 
+## `dist/` Is a Committed, Browsable Download Shelf
+
+**Policy (intentional):** `dist/` is checked into the repo so anyone — including
+non-technical PMs who never touch a terminal — can browse to
+`https://github.com/deanpeters/Product-Manager-Skills/tree/main/dist`, read a
+plain-language `README.md`, scan the `CATALOG.md`, and download a skill or a pack
+directly. Making the library easy and educational to access is the point; hiding
+the ZIPs behind the Releases tab worked against that.
+
+The **tracked** layout (produced by `scripts/build-dist.sh`):
+
+```text
+dist/
+  README.md              # plain-language landing page (renders on GitHub)
+  CATALOG.md             # browsable catalog of every skill, by category
+  <skill-name>.zip       # individual, upload-ready skill ZIPs (flat)
+  packages/
+    pm-skills-starter-pack.zip
+    02-discovery-pack.zip
+    03-strategy-pack.zip
+    04-delivery-pack.zip
+    05-ai-pm-pack.zip
+    99-all-skills-pack.zip
+    pm-skills-codex.zip
+```
+
+`README.md` and `CATALOG.md` are **generated from `skills/`**, so they never drift
+from the source. Re-run `scripts/build-dist.sh` after adding or changing skills.
+
+The intermediate build directories (`dist/claude-desktop/`, `dist/codex/`,
+`dist/skill-zips/`, `dist/release/`, and the master `dist/*-release.zip`) remain
+**git-ignored** — only the curated shelf above is committed.
+
+GitHub Releases still exist and are still produced on `v*` tags; the committed
+`dist/` shelf is a complement to them, not a replacement.
+
 ## Maintainer Flow
 
 From the repo root:
@@ -84,8 +120,8 @@ Build everything:
 
 ## Important Rules
 
-- Do not edit files under `dist/` directly.
-- Do not commit generated ZIP files unless the repo intentionally changes that policy.
+- Do not edit files under `dist/` by hand — they are generated. Re-run `scripts/build-dist.sh` to refresh the committed shelf.
+- The committed `dist/` shelf (README, CATALOG, skill ZIPs, `packages/`) **is** intentionally version-controlled; the intermediate build dirs are git-ignored. This is the "intentional policy change" the older rule referred to.
 - Claude Desktop/Web packs are ZIPs of individual upload-ready skill ZIPs. Users unzip the pack first, then upload the skill ZIPs inside to Claude.
 - Codex packages are expanded `.agents/skills` folders inside a ZIP, not ZIPs of ZIPs.
 - Do not remove `.claude-plugin/marketplace.json`; Claude Code users rely on the marketplace path.
